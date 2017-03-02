@@ -1,0 +1,45 @@
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="/admin/#/">Management</a></li>
+        <li><a href="/admin/#/routes">Routes</a></li>
+        <li class="active">{{route.Name}}</li>
+    </ul>
+    <div class="alert alert-{{message.Type}} fade in alert-dismissable" ng-show="message.Show == true">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click="message.Show = false">×</button>
+        {{message.Text}}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-green margin-bottom-40">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-map-marker"></i> {{route.Name}}</h3>
+                </div>
+                <div class="panel-body">                                                      
+                    <form class="margin-bottom-40" role="form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" ng-model="route.Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input class="form-control" ng-model="route.Description">
+                        </div>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-control" ng-model="route.Type">
+                                <option value="" />
+                                <option value="0">Pick Up</option>
+                                <option value="1">Drop Off</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Bus</label>
+                            <input class="form-control" ng-model="route.Bus">
+                        </div>
+                        <button type="button" class="btn-u btn-u-blue pull-right" ng-click="save()">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

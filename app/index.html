@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- TODO: merge this files with the build {vendor/main}.css -->
+        <!-- CSS Global Compulsory -->
+        <link rel="stylesheet" href="/assets/unify/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/unify/css/style.css">
+        <!-- CSS Implementing Plugins -->
+        <link rel="stylesheet" href="/assets/unify/plugins/line-icons/line-icons.css">
+        <link rel="stylesheet" href="/assets/unify/plugins/font-awesome/css/font-awesome.min.css">
+        <!-- CSS Theme -->
+        <link rel="stylesheet" href="/assets/unify/css/theme-colors/default.css">
+        <!-- CSS Customization -->
+        <link rel="stylesheet" href="/assets/unify/css/custom.css">
+    </head>
+    <body ng-app="schoolroutes">
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="header">
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <!-- Topbar Navigation -->
+                    <ul class="loginbar pull-right">
+                        <li>
+                            <i class="fa fa-globe"></i>
+                            <a>Languages</a>
+                            <ul class="languages">
+                                <li class="active">
+                                    <a href="#">English <i class="fa fa-check"></i></a>
+                                </li>
+                                <li><a href="#">Spanish</a></li>
+                            </ul>
+                        </li>
+                        <li class="topbar-devider"></li>
+                        <li>
+                            <a href="/auth/login">Login</a>
+                        </li>
+                    </ul>
+                    <!-- End Topbar Navigation -->
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="navbar navbar-default mega-menu" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        <span class="logo-arrowleft"></span>
+                          <a class="navbar-brand" href="/admin/#/">www.schoolroutes.com</a>
+                        <span class="logo-arrowright"></span>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-responsive-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                    Management
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#/routes/">Routes</a></li>
+                                    <li><a href="#/users/">Users</a></li>
+                                    <li><a href="#/homepage/">Home Page Setup</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Add your site or application content here -->
+        <div ng-view=""></div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-v1">
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    2014 &copy; All Rights Reserved.
+                                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                                </p>
+                            </div>
+                            <!-- Social Links -->
+                            <div class="col-md-6">
+                                <ul class="footer-socials list-inline">
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                            <i class="fa fa-skype"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Social Links -->
+                        </div>
+                    </div>
+                </div><!--/copyright-->
+            </div>
+        </footer>
+
+        <!-- build:js(.) scripts/oldieshim.js -->
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+        <!-- endbuild -->
+
+				<script src="/admin/libs/ckeditor/ckeditor.js"></script>
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
+        <script src="bower_components/jquery-form/jquery.form.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/user.js"></script>
+        <script src="scripts/controllers/routes.js"></script>
+        <script src="scripts/controllers/route.js"></script>
+        <script src="scripts/controllers/homepage.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/schools.js"></script>
+        <script src="scripts/directives/imageupload.js"></script>
+        <script src="scripts/directives/blockrecentwork.js"></script>
+        <!-- endbuild -->
+
+        <!-- JS Global Compulsory -->
+        <script type="text/javascript" src="/assets/unify/plugins/jquery/jquery-migrate.min.js"></script>
+        <!-- JS Customization -->
+        <script type="text/javascript" src="/assets/unify/js/custom.js"></script>
+        <script>
+            if (window.location.port && window.location.port != 80 && window.location.port != 443) {
+                s = document.createElement('script');
+                s.src = "//" + window.location.hostname + ":9001/livereload.js"
+                document.getElementsByTagName('head')[0].appendChild(s);
+            }
+        </script>
+        <script type="text/javascript" src="/assets/unify/js/app.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                App.init();
+            });
+        </script>
+    </body>
+</html>

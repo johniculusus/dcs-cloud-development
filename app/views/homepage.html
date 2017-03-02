@@ -1,0 +1,355 @@
+<div class="container">
+	<ul class="breadcrumb">
+		<li><a href="/admin/#/">Management</a></li>
+		<li class="active">Routes</li>
+	</ul>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-grey">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<i class="fa fa-home"></i> Home Page Setup
+					</h3>
+				</div>
+				<div class="panel-body">
+					<!-- Logo -->
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Branding</h3>
+							<p>Upload your website branding and logo usig the following slots.
+								The images will not be scaled; use the resolution 103x39, preferably with a transparent PNG.</p>
+							<div class="col-xs-6">
+								<image-upload width="103" height="39" target="homepage.LogoHeader"></image-upload>
+							</div>
+							<div class="col-xs-6">
+								<image-upload width="103" height="39" target="homepage.LogoFooter"></image-upload>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<!-- Ends logo -->
+
+					<!-- Sliders -->
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Sliders</h3>
+							<p>Sliders are shown in the top of the page. Use few words per line
+								on Heading and Subheading (Slider text). The image can also be a Vimeo or Youtube
+								video URL.</p>
+							<div class="tab-v1" ng-init="slider=1">
+								<ul class="nav nav-tabs">
+									<li ng-class="slider == '1' ? 'active' : ''">
+										<a href="javascript:" ng-click="slider = 1">Slider #1</a>
+									</li>
+									<li ng-class="slider == '2' ? 'active' : ''">
+										<a href="javascript:" ng-click="slider = 2">Slider #2</a>
+									</li>
+									<li ng-class="slider == '3' ? 'active' : ''">
+										<a href="javascript:" ng-click="slider = 3">Slider #3</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade" ng-class="slider == '1' ? 'active in' : ''">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="title-slider1">Slider text</label>
+												<textarea
+																	class="form-control"
+																	id="title-slider1"
+																	rows="3"
+																	placeholder="Heading"
+																	ng-model="homepage.Slider1.Title"></textarea>
+											</div>
+											<div class="form-group">
+												<textarea
+																	class="form-control"
+																	id="text-slider1"
+																	rows="3"
+																	placeholder="Subheading"
+																	ng-model="homepage.Slider1.Text"></textarea>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="media-slider1">Image</label>
+												<image-upload target="homepage.Slider1.Media" width="495" height="224"
+																			inputbox="true" />
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" ng-class="slider == '2' ? 'active in' : ''">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="title-slider2">Slider text</label>
+												<textarea
+																	class="form-control"
+																	id="title-slider2"
+																	rows="3"
+																	placeholder="Heading"
+																	ng-model="homepage.Slider2.Title"></textarea>
+											</div>
+											<div class="form-group">
+												<textarea
+																	class="form-control"
+																	id="text-slider2"
+																	rows="3"
+																	placeholder="Subheading"
+																	ng-model="homepage.Slider2.Text"></textarea>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="media-slider2">Image</label>
+												<image-upload target="homepage.Slider2.Media" width="495" height="224"
+																			inputbox="true"/>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" ng-class="slider == '3' ? 'active in' : ''">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="title-slider3">Slider text</label>
+												<textarea
+																	class="form-control"
+																	id="title-slider3"
+																	rows="3"
+																	placeholder="Heading"
+																	ng-model="homepage.Slider3.Title"></textarea>
+											</div>
+											<div class="form-group">
+												<textarea
+																	class="form-control"
+																	id="text-slider3"
+																	rows="3"
+																	placeholder="Subheading"
+																	ng-model="homepage.Slider3.Text"></textarea>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="media-slider3">Image</label>
+												<image-upload target="homepage.Slider3.Media" width="495" height="224"
+																			inputbox="true"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr/>
+					<!-- Ends sliders -->
+
+					<!-- Highlights -->
+					<div class="row">
+						<div class="col-xs-12">
+							<h3>Hilights</h3>
+							<p>Hilights are show bellow the slider. The image field should be a 
+								<a href="http://fortawesome.github.io/Font-Awesome/icons/">font-awesome icon name</a>.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<h4>Highlight #1</h4>
+							<div class="form-group">
+								<input type="text" class="form-control"
+											 name="title-highlight1" id="title-highlight1"
+											 placeholder="Hilight title"
+											 ng-model="homepage.Highlight1.Title"/>
+							</div>
+							<div class="form-group">
+								<textarea type="text" class="form-control"
+													name="text-highlight1" id="text-highlight1"
+													placeholder="Single paragraph-text"
+													rows="3"
+													ng-model="homepage.Highlight1.Text"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="media-highlight1">Icon</label>
+								<input type="text" class="form-control"
+											 name="media-highlight1" id="media-highlight1"
+											 placeholder="fa-compress"
+											 ng-model="homepage.Highlight1.Media">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<h4>Highlight #2</h4>
+							<div class="form-group">
+								<input type="text" class="form-control"
+											 name="title-highlight2" id="title-highlight2"
+											 placeholder="Hilight title"
+											 ng-model="homepage.Highlight2.Title"/>
+							</div>
+							<div class="form-group">
+								<textarea type="text" class="form-control"
+													name="text-highlight2" id="text-highlight2"
+													placeholder="Single paragraph-text"
+													rows="3"
+													ng-model="homepage.Highlight2.Text"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="media-highlight2">Icon</label>
+								<input type="text" class="form-control"
+											 name="media-highlight2" id="media-highlight2"
+											 placeholder="fa-cog"
+											 ng-model="homepage.Highlight2.Media">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<h4>Highlight #3</h4>
+							<div class="form-group">
+								<input type="text" class="form-control"
+											 name="title-highlight3" id="title-highlight3"
+											 placeholder="Hilight title"
+											 ng-model="homepage.Highlight3.Title"/>
+							</div>
+							<div class="form-group">
+								<textarea type="text" class="form-control"
+													name="text-highlight3" id="text-highlight3"
+													placeholder="Single paragraph-text"
+													rows="3"
+													ng-model="homepage.Highlight3.Text"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="media-highlight3">Icon</label>
+								<input type="text" class="form-control"
+											 name="media-highlight3" id="media-highlight3"
+											 placeholder="fa-cog"
+											 ng-model="homepage.Highlight3.Media">
+							</div>
+						</div>
+					</div>
+					<hr/>
+					<!-- Ends highlights -->
+
+					<!-- Recent Work -->
+					<div class="row">
+						<div class="col-xs-12">
+							<h4>Recent Work Blocks</h4>
+							<p>This blocks are shown right bellow the Hilights.
+								They have an image, a title, a 'read more' link and a text paragraph.</p>
+							<label>Section title</label>
+							<input type="text" class="form-control"
+										 ng-model="homepage.InfoBlockTitle"
+										 placeholder="Recent Work" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3" block-recent-work block="homepage.InfoBlock1"></div>
+						<div class="col-xs-3" block-recent-work block="homepage.InfoBlock2"></div>
+						<div class="col-xs-3" block-recent-work block="homepage.InfoBlock3"></div>
+						<div class="col-xs-3" block-recent-work block="homepage.InfoBlock4"></div>
+					</div>
+					<hr />
+					<!-- Ends infoblocks -->
+
+					
+					<div class="row">
+						<!-- Welcome -->
+						<div class="col-xs-8">
+							<div class="row">
+								<div class="col-xs-12">
+									<h3>Welcome Block</h3>
+									<p>The welcome block is displayed bellow the Recent Work blocks,
+										at the left of a series os screenshots. </p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="col-xs-12">
+										<input type="text" class="form-control"
+													 name="title-welcomeblock" id="title-welcomeblock"
+													 placeholder="Title "
+													 ng-model="homepage.WelcomeBlock.Title">
+									</div>
+									<div class="col-xs-4">
+										<image-upload width="973" height="615" target="homepage.WelcomeBlock.Media"></image-upload>
+									</div>
+									<div class="col-xs-8">
+										<textarea ckeditor="editorOptions"
+															class="form-control"
+															placeholder="HTML Text"
+															rows="15"
+															ng-model="homepage.WelcomeBlock.Text"></textarea>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<h3>Hero Block</h3>
+									<p>This is a quote-like block, displayed bellow the Welcome block.</p>
+								</div>
+								<div class="col-xs-12">
+									<textarea ckeditor="editorOptions"
+														class="form-control"
+														placeholder="Quote content goes here"
+														ng-model="homepage.HeroBlock.Text"></textarea>
+								</div>
+							</div>
+						</div>
+						<!-- Slideshow -->
+						<div class="col-xs-4">
+							<h3>Slideshow</h3>
+							<div class="slideshow-item" ng-repeat="slide in homepage.SlideShow">
+								<h5>
+									Image #{{$index}}
+									<button class="btn btn-danger btn-xs pull-right" ng-click="removeSlide($index)">
+										<i class="fa fa-remove"></i></button>
+								</h5>
+								<image-upload width="973" height="615" target="slide.Media"></image-upload>
+								<input type="text" class="form-control"
+											 placeholder="Image legend"
+											 ng-model="slide.Title">
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn btn-default" ng-click="addSlide()">
+									<i class="fa fa-plus"></i> Image
+								</button>
+							</div>
+						</div>
+						<!-- Ends slideshow -->
+					</div>
+					<hr />
+
+					<!-- Clients -->
+					<div class="row">
+						<div class="col-xs-12">
+							<h3>Clients</h3>
+							<p>The images listed here appear at the bottom of the page,
+								and one can use it as </p>
+
+							<button type="button" class="btn btn-default" ng-click="addClient()">
+								<i class="fa fa-plus"></i> Client Image
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<div ng-repeat="client in _clients track by $index" class="col-xs-3">
+							<div class="form-group">
+								<h5>
+									Client #{{$index}}
+									<button type="button"
+													class="btn btn-danger btn-xs pull-right"
+													ng-click="removeClient($index)">
+										<i class="fa fa-remove"></i>
+									</button>
+								</h5>
+								<image-upload width="126" height="126" target="client.Media"></image-upload>
+							</div>
+						</div>
+					</div>
+					<hr />
+					
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!-- Ends panel -->
+				
+			</div>
+		</div>
+	</div>
+</div>
