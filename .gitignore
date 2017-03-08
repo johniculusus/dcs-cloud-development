@@ -4,3 +4,4 @@ dist
 .tmp
 .sass-cache
 bower_components
+test_cannot_redeploy_upon_last_successful_build_was_triggered_already
